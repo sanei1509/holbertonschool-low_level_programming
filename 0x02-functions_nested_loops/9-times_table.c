@@ -5,7 +5,7 @@
  *Return: 0
  *@c: number for evaluate
  */
-int print_last_digit(int c)
+void times_table(void)
 {
-	int rt;
+	
 }
