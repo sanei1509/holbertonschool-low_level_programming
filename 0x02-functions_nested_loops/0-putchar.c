@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
 /**
  *main-print _putchar with putchar
  *Return: 0
@@ -11,7 +10,7 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		putchar(text[i]);
+		_putchar(text[i]);
 	}
 	return (0);
 }
