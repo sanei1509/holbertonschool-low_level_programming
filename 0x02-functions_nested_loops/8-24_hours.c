@@ -2,13 +2,12 @@
 /**
  *jack_bauer - return deppend of sign of n
  *
- *Return: 0
- *@c: number for evaluate
  */
 void jack_bauer(void)
 {
 	int minutes;
 	int seconds;
+
 	for (minutes = 0; minutes <= 23; minutes++)
 	{
 		for (seconds = 0; seconds <= 59; seconds++)
@@ -18,9 +17,10 @@ void jack_bauer(void)
 			_putchar(':');
 			_putchar((seconds / 10) + '0');
 			_putchar((seconds % 10) + '0');
-			if(minutes <= 23)
+			
+			if (minutes <= 23)
 			{
-				putchar('\n');
+				_putchar('\n');
 			}
 		}
 	}
