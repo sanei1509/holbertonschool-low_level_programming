@@ -1,8 +1,10 @@
 #include "main.h"
 #include <ctype.h>
 /**
- *_islower - return 1 if c is lowercase else return 0
- * c : number for evaluate
+ * _islower - return one if c is lowercase else return zero
+ *
+ *Return: 0
+ *@c: number for evaluate
  */
 int _islower(int c)
 {
