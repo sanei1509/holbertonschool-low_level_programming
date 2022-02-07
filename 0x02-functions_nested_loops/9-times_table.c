@@ -1,12 +1,11 @@
 #include "main.h"
 /**
- *print_last_digit - return deppend of sign of n
+ *times_table - return deppend of sign of n
  *
  *Return: 0
- *@c: number for evaluate
  */
 void times_table(void)
-{	
+{
 	int res = 0;
 	int i;
 	int j;
@@ -15,7 +14,7 @@ void times_table(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			res= j * i;
+			res = j * i;
 			if (res > 9)
 			{
 				if (j != 0)
@@ -26,7 +25,7 @@ void times_table(void)
 					_putchar((res % 10) + 48);
 					if (j != 9)
 					{
-						if(res < 9)
+						if (res < 9)
 						{
 						_putchar(',');
 						_putchar(' ');
@@ -49,7 +48,6 @@ void times_table(void)
 					{
 						_putchar(',');
 					}
-				
 			}
 		}
 		_putchar('\n');
