@@ -27,7 +27,7 @@ int main(void)
 			putchar(' ');
 		}
 		else
-			printf("%d ", n);	
+			printf("%d ", n);
 	}
 	putchar('\n');
 	return (0);
