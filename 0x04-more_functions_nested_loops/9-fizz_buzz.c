@@ -13,11 +13,13 @@ int main(void)
 	{
 		if ((((n % 2 || n % 3 || n % 5)) == 0))
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
+			putchar(' ');
 		}
 		else if (n % 5 == 0)
 		{
 			printf("Buzz ");
+			putchar(' ');
 		}
 		else if (n % 3 == 0)
 		{
