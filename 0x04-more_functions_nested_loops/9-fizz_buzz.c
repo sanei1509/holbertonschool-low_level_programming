@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *fizz_buzz - print things
+ *main - print things
  *Return: 0
  */
 int main(void)
@@ -22,7 +22,7 @@ int main(void)
 		else if (n % 3 == 0)
 		{
 			printf("Fizz");
-		}	
+		}
 		else
 			printf("%d ", n);
 		if (n < 100)
