@@ -4,15 +4,14 @@
  *more_numbers - print 10 times 0 to 14
  *Return: void
  */
-
 void more_numbers(void)
 {
 	int num = 0;
 	int i;
 
-	for (i =0; i<= 9; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		num=0; /* reset the value of while*/
+		num=0;
 		while (num <= 14)
 		{
 			if (num > 9)
