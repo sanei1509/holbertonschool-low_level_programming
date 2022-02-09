@@ -12,7 +12,6 @@ void print_line(int n)
 	for(l = 0; l < n, l++)
 	{
 		_putchar('\n');
-	}
 	for (i = 0; i < n; i++)
 	{
 		if (n <= 0)
@@ -24,5 +23,6 @@ void print_line(int n)
 			_putchiar(' ');
 		}
 		_putchar('\n');
+	}
 	}
 }
