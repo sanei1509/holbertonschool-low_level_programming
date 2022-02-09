@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- *print_line - print 0 to 9 but no 2 and 4
+ *print_diagonal - print n number of spaces follow that /
  *Return: 0
  */
 
 void print_line(int n)
 {
-	for (n = n; n <= n; n++)
+	for ()
 	{
 
 	}
 	_putchar('-');
-	_putchar(' ');
+	_putchiar(' ');
 }
