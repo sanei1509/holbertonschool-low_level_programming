@@ -2,26 +2,28 @@
 
 /**
  *print_triangle - show a triangle with #
- *@size : size of square
+ *@size : size of triangle
  *Return: 0
  */
 void print_triangle(int size)
 {
-	int y, x;
+		int l;
+		int a;
 
-	if (size <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-	for (x = 0; x < size; ++x)
-	{
-		for (y = 0; y < size; ++y)
+		if (size <= 0)
 		{
-			_putchar('#');
+			_putchar('\n');
 		}
-	_putchar('\n');
-	}
-	}
+		for (l = 1; l <= size; l++)
+		{
+			for (a = 1; a <= (size - l); a++)
+			{
+				_putchar(' ');
+			}
+			for (a = 1; a <= l; a++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
 }
