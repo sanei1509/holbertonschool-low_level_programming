@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * *main - Prints out a string to 10.
- * *Return: Returnn.
- * */
+ *main - Prints out a string to 10.
+ *Return: Returnn.
+ */
 int main(void)
 {
 	long int i = 2;
