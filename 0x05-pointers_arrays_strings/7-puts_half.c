@@ -24,11 +24,10 @@ void puts_half(char *s)
 	}
 	else
 	{
-		for (i = (ld - 1) / 2; i <= ld - 2; i++)
+		for (i = (ld - 1) / 2; i <= ld - 1; i++)
 		{
 			_putchar(s[i]);
 		}
-		_putchar('\n');
 
 	}
 }
