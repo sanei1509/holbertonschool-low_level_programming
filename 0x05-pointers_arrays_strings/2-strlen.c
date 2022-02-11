@@ -3,7 +3,7 @@
 /**
  *_strlen - swaps the value of two integers
  * @s: The pointer value one
- * return no
+ * Return: c
  */
 int _strlen(char *s)
 {
