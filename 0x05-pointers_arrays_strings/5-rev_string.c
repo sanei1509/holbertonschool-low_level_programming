@@ -13,7 +13,7 @@ void rev_string(char *s)
 	{
 		i++;
 	}
-	i -= 1;
+	i = i - 1;
 	largo = i;
 	for (b = 0; b <= largo / 2 ; b++, i--)
 	{
