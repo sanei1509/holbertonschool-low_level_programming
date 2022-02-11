@@ -15,20 +15,17 @@ void puts_half(char *s)
 	}
 	if (ld % 2 == 0)
 	{
-		for (i = ld / 2); i <= ld - 1; i++)
+		for (i = ld / 2; i <= ld; i++)
 		{
 			_putchar(s[i]);
 		}
-
-		_putchar('\n');
 	}
 	else
 	{
-		for (i = (ld - 1) / 2 ;i <= ld - 1; i++)
+		for (i = (ld + 1) / 2; i < ld; i++)
 		{
 			_putchar(s[i]);
 		}
-		_putchar('\n');
-
 	}
+	_putchar('\n');
 }
