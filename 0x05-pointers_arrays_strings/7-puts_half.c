@@ -15,7 +15,7 @@ void puts_half(char *s)
 	}
 	if (ld % 2 == 0)
 	{
-		for (i = ld / 2; i <= ld - 1; i++)
+		for (i = (ld / 2) - 1; i <= ld - 1; i++)
 		{
 			_putchar(s[i]);
 		}
@@ -28,6 +28,7 @@ void puts_half(char *s)
 		{
 			_putchar(s[i]);
 		}
+		_putchar('\n');
 
 	}
 }
