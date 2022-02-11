@@ -2,7 +2,7 @@
 
 /**
  * puts_half - print the string in reverse
- * @s: The pointer value one
+ * @str: The pointer value one
  */
 void puts_half(char *str)
 {
