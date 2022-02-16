@@ -15,14 +15,11 @@ char *leet(char *c)
 
 	for (; c[i]; i++)
 	{
-		for (; a < 10; a++)
+		for (a = 0; a < 10; a++)
 		{
 			if (c[i] == or[a])
-			{
 				c[i] = new[a];
-			}
 		}
 	}
-
 	return (c);
 }
