@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* reverse_array - function that reverse the elements of an array
-* @a: array of elements
-* @n: number of elements in the a
+* *string_toupper - function that convert in uppercase the string
+* @n: array of elements
+* Return: char in uppercase
 */
 
 char *string_toupper(char *n)
@@ -14,8 +14,8 @@ char *string_toupper(char *n)
 	{
 		if (n[i] >= 'a' && n[i] <= 'z')
 		{
-			n[i] = n[i] -32;
+			n[i] = n[i] - 32;
 		}
 	}
-	return(n);
+	return (n);
 }
