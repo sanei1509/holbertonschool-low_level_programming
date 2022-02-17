@@ -7,22 +7,29 @@
 
 void print_number(int n)
 {
-	unsigned int dg;
-	unsigned int nat = n;
-	unsigned int dc;
+	unsigned int dc, dig, nat = n;
+	double f = 1;
 
-	double t = 1;
-   
-	if(n == 0)
+	if (n == 0)
 		_putchar('0');
 	else
 	{
-		if (n < '0')
-			_putchar(n + '0');
-	}
-	
-		_putchar(n % 10 + '0');
+		if (n < 0)
+		{
+			nat = n * -1;
+			_putchar('-');
+		}
 
-	
-	
+	while (f <= nat)
+		f *= 10;
+	dc = f / 10;
+
+	while (dc >= 1)
+	{
+		dig = nat / dc;
+		_putchar(dig + '0');
+		nat = (nat - (dc * dig));
+		dc /= 10;
+	}
+	}
 }
