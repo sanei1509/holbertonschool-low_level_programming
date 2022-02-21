@@ -10,9 +10,9 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i;
-	int length = -2;
+	int length = 0;
 
-	while (*s != '\0')
+	while (*s != ' ')
 	{
 		for (i = 0; accept[i] != '\0'; i++)
 		{
