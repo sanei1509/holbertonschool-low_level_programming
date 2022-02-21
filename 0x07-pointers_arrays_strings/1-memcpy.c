@@ -3,7 +3,7 @@
 /**
 **_memcpy - function that copy spaces of memory
 *@dest:received a char
-*@src: char to fill especify the space of memory 
+*@src: char to fill especify the space of memory
 *@n:received int the limit
 *Return: a pointer to the memory area 'dest'
 */
