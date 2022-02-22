@@ -3,7 +3,7 @@
 
 /**
 *print_diagsums - suma diagonalmente de una matriz cuadrada de n size
-*@a:matrix bidimensional 
+*@a: pointer to a matrix bidimensional
 *@size: size of square matrix
 */
 void print_diagsums(int *a, int size)
