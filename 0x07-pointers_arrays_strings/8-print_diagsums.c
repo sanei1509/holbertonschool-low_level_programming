@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
-* main - check the code
-*
-* Return: Always 0.
+*print_diagsums - suma diagonalmente de una matriz cuadrada de n size
+*@a:matrix bidimensional 
+*@size: size of square matrix
 */
 void print_diagsums(int *a, int size)
 {
@@ -17,12 +17,10 @@ void print_diagsums(int *a, int size)
 		i = (row * size) + row;
 		diagonal_one += a[i];
 	}
-
 	for (row = 1; row <= size; row++)
 	{
 		i = (row * size) - row;
 		diagonal_two += a[i];
 	}
-
 	printf("%d, %d\n", diagonal_one, diagonal_two);
 }
