@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  *prime - prime number 1 otherwise 0
- *@y: number
- *@x: number
+ *@n: number received
+ *@i: number received
  *Return: 1 if number is prime, 0 otherwise
  **/
 int prime(int n, int i)
