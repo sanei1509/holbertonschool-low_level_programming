@@ -1,1 +1,1 @@
-First touch with static libraries
+Project about static libraries
