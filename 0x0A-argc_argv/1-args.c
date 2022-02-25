@@ -2,8 +2,8 @@
 
 /**
 *main - print the number of arguments passed
-*@argc:
-*@argv:
+*@argc: count the argument on the command line
+*@argv: vector of arguments
 *Return: 0
 */
 
