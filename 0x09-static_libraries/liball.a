@@ -1,0 +1,525 @@
+!<arch>
+0-isupper.c/    0           0     0     644     215       `
+#include "main.h"
+
+/**
+ *_isupper - check if the entry is upper or lowercase
+ *@c: receive character
+ *Return: 0
+ */
+
+int _isupper(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+0-memset.c/     0           0     0     644     306       `
+#include "main.h"
+
+/**
+**_memset - function that fills memory with a constant
+*@s:received a char
+*@b:a constant char
+*@n:received int
+*Return: a pointer to the memory area 's'
+*/
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
+0-strcat.c/     0           0     0     644     520       `
+#include "main.h"
+
+/**
+* *_strcat - function tha concatenate two strings
+* @dest : place where append de src string
+* @src: place of the string for append
+* Return: pointer to dest
+*/
+
+char *_strcat(char *dest, char *src)
+{
+	int n;
+	int len = _strlen(dest);
+
+	for (n = 0; src[n] != '\0'; n++, len++)
+	{
+		dest[len] = src[n];
+	}
+
+	return (dest);
+}
+
+/**
+*_strlen - swaps the value of two integers
+* @s: The pointer value one
+* Return: c
+*/
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+		c++;
+
+	return (c);
+}
+
+100-atoi.c/     0           0     0     644     747       `
+#include <stdio.h>
+#include "main.h"
+
+/**
+* _atoi - converts string to an integer
+* @s: string input
+*
+* Return: integer number
+*/
+
+int _atoi(char *s)
+{
+	char c;
+	unsigned int i, n = 0, j = _strlen(s) - 1, null = -1;
+	int flag = 0, sign = 1;
+
+	for (i = 0; i <= j; i++)
+	{
+		c = s[i];
+		if (c == '-')
+			sign *= -1;
+		if (c >= 48 && c <= 57)
+		{
+			n = n * 10 + (c - '0');
+			flag = 1;
+		}
+		if (flag == 1)
+		{
+			if (!(c >= 48 && c <= 57))
+				break;
+		}
+	}
+	if (sign == -1)
+	{
+		n *= -1;
+	}
+	if (j == null)
+		return (0);
+	return (n);
+}
+
+/**
+* _strlen - string length
+* @s: string
+*
+* Return: the length of a string
+*/
+int _strlen(char *s)
+{
+	int i;
+	char a;
+
+	for (i = 0; i > -1 ; i++)
+	{
+		a = s[i];
+		if (a == '\0')
+			break;
+	}
+	return (i);
+}
+
+1-isdigit.c/    0           0     0     644     219       `
+#include "main.h"
+
+/**
+ *_isdigit - check if the entry is upper or lowercase
+ *@c: receive character
+ *Return: 0 || 1
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+1-memcpy.c/     0           0     0     644     361       `
+#include "main.h"
+
+/**
+**_memcpy - function that copy spaces of memory
+*@dest:received a char
+*@src: char to fill especify the space of memory
+*@n:received int the limit
+*Return: a pointer to the memory area 'dest'
+*/
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
+}
+
+1-strncat.c/    0           0     0     644     564       `
+#include "main.h"
+
+/**
+**_strncat - function tha concatenate two strings
+* @dest : place where append de src string
+* @src: place of the string for append
+* @n: n is number until print src
+* Return: pointer to dest
+*/
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int i;
+	int len = _strlen(dest);
+
+	for (i = 0; src[i] != src[n]; i++, len++)
+	{
+		dest[len] = src[i];
+	}
+
+	return (dest);
+}
+
+/**
+*_strlen - swaps the value of two integers
+* @s: The pointer value one
+* Return: c
+*/
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+		c++;
+
+	return (c);
+}
+
+2-strchr.c/     0           0     0     644     354       `
+#include "main.h"
+
+/**
+**_strchr - function that locates a character in a string
+*@s: char to fill especify the space of memory
+*@c:received int the limit
+*Return: a pointer to the first ocurrence of character c
+*/
+
+char *_strchr(char *s, char c)
+{
+	while (*s != '\n')
+	{
+		if (*s != c)
+		{
+			s++;
+		}
+		else
+		{
+			return (s);
+		}
+	}
+	return ('\0');
+}
+2-strlen.c/     0           0     0     644     194       `
+#include "main.h"
+
+/**
+ *_strlen - swaps the value of two integers
+ * @s: The pointer value one
+ * Return: c
+ */
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+		c++;
+
+	return (c);
+}
+2-strncpy.c/    0           0     0     644     401       `
+#include "main.h"
+
+/**
+**_strncpy - function tha concatenate two strings
+* @dest : place where append de src string
+* @src: place of the string for append
+* @n: n is number until print src
+* Return: pointer to dest
+*/
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	for (; i < n; i++)
+		dest[i] = '\0';
+	return (dest);
+}
+
+3-islower.c/    0           0     0     644     230       `
+#include "main.h"
+#include <ctype.h>
+/**
+ * _islower - return one if c is lowercase else return zero
+ *
+ *Return: 0
+ *@c: number for evaluate
+ */
+int _islower(int c)
+{
+	if (islower(c) > 0)
+	{
+		return (1);
+	}
+	else
+	return (0);
+}
+3-puts.c/       0           0     0     644     213       `
+#include "main.h"
+
+/**
+ *_puts - swaps the value of two integers
+ * @str: The pointer value one
+ */
+void _puts(char *str)
+{
+	int c = 0;
+
+	while (str[c] != '\0')
+	{
+		_putchar(str[c]);
+		c++;
+	}
+	_putchar('\n');
+}
+
+3-strcmp.c/     0           0     0     644     329       `
+#include "main.h"
+
+/**
+* _strcmp - function that compares two strings
+* @s1 : number one to compare
+* @s2: number two to compare
+* Return: 0 is numbers are equal result of sustraction if not.
+*/
+
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 == *s2 && (*s1 != '\0' && *s2 != '\0'))
+	{
+		s1++;
+		s2++;
+	}
+			return (*s1 - *s2);
+}
+
+3-strspn.c/     0           0     0     644     480       `
+#include "main.h"
+
+/**
+*_strspn - function that count ocurrences of first segmen with accept char
+*@s: string of input
+*@accept: characters that should compare with s
+*Return: length of the ocurrrences with the first segment
+*/
+
+unsigned int _strspn(char *s, char *accept)
+{
+	int i;
+	int length = 0;
+
+	while (*s != ' ')
+	{
+		for (i = 0; accept[i] != '\0'; i++)
+		{
+			if (*s != ' ')
+			{
+				if (accept[i] == *s)
+				{
+					length++;
+				}
+			}
+
+		}
+		s++;
+	}
+	return (length);
+}
+4-isalpha.c/    0           0     0     644     237       `
+#include "main.h"
+#include <ctype.h>
+/**
+ *_isalpha - return one if c is lowercase else return zero
+ *
+ *Return: 0
+ *@c: number for evaluate
+ */
+int _isalpha(int c)
+{
+	if (isalpha(c) != 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+4-strpbrk.c/    0           0     0     644     406       `
+#include "main.h"
+
+/**
+**_strpbrk - function that count ocurrences of first segmen with accept char
+*@s: string of input
+*@accept: characters that should compare with s
+*Return: the string with coincidences
+*/
+
+char *_strpbrk(char *s, char *accept)
+{
+	int i;
+
+	while (*s != ' ')
+	{
+		for (i = 0; accept[i] != '\0'; i++)
+		{
+			if (accept[i] == *s)
+			{
+				return (s);
+			}
+		}
+		s++;
+	}
+	return ('\0');
+}
+5-strstr.c/     0           0     0     644     494       `
+#include "main.h"
+
+/**
+**_strstr - function that count ocurrences of first segmen with accept char
+*@haystack: string of input
+*@needle: characters that should compare with s
+*Return: the stri	ng with coincidences
+*/
+
+char *_strstr(char *haystack, char *needle)
+{
+	int a = 0;
+	int b = 0;
+
+	while (haystack[a])
+	{
+		while (needle[b])
+		{
+			if (haystack[a + b] != needle[b])
+			{
+				break;
+			}
+			b++;
+		}
+		if (needle[b] == '\0')
+		{
+			return (haystack + a);
+		}
+		a++;
+	}
+	return ('\0');
+}
+6-abs.c/        0           0     0     644     177       `
+#include "main.h"
+/**
+ *_abs - return deppend of sign of n
+ *
+ *Return: 0
+ *@c: number for evaluate
+ */
+int _abs(int c)
+{
+	if (c < 0)
+	{
+		return (-c);
+	}
+	else
+		return (c);
+}
+
+9-strcpy.c/     0           0     0     644     332       `
+#include "main.h"
+
+/**
+ *_strcpy - return the copy pointed string por src
+ *@dest: copy source to here
+ *@src: source for copy
+ *Return: copy of src
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int length = 0;
+	int i;
+
+	while (src[length] != '\0')
+		length++;
+
+	for (i = 0; i <= length; i++)
+		dest[i] = src[i];
+
+	return (dest);
+
+}
+main.c/         0           0     0     644     142       `
+#include "main.h"
+
+int main(void)
+{
+ _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+ return (0);
+}
+_putchar.c/     0           0     0     644     248       `
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+		return (write(1, &c, 1));
+}
