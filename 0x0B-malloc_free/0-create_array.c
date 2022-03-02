@@ -4,7 +4,7 @@
 **create_array - function that create a new array with a especific character
 *@size: receive a size of array
 *@c: receive a especific char
-*RETURN: pointer to a char or null
+*Return: pointer to a char or null
 */
 
 char *create_array(unsigned int size, char c)
