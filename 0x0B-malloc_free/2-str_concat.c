@@ -16,11 +16,14 @@ char *str_concat(char *s1, char *s2)
 	*Necesitamos la longitud de s1 y s2
 	*check the input
 	*/
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL)
 	{
 		return (NULL);
 	}
-
+	if (s2 = NULL)
+	{
+		return (NULL);
+	}
 	while (*(s1 + i))
 	{
 		len_one++, i++;
