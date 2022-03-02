@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-**_strdup - function that return a pointer to a memory reserved with a copy of a string passed
+**_strdup - function that return a pointer to str_copy
 *@str: receive a pointer to a string
 *Return: pointer to a char or null
 */
@@ -26,12 +26,12 @@ char *_strdup(char *str)
 	ld++;
 
 	copy_of_str = malloc(sizeof(char) * ld);
-	
+
 	if (copy_of_str == NULL)
 	{
 		return (NULL);
         }
-	else 
+	else
 	{
 		for (i = 0; i < ld; i++)
 		{
