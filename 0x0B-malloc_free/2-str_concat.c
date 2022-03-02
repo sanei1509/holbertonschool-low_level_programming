@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 
 	/* guardamos el espacio en memoria */
 	concatenated_string = malloc(sizeof(char) * (len_two + len_one));
-	
+
 	if (concatenated_string == NULL)
 	{
 		return (NULL);
