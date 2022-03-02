@@ -2,8 +2,9 @@
 
 /**
 ***alloc_grid - return a pointer to a 2 arrs(dimensional)
-*@width:
-*@height:
+*@width: ancho de la grilla
+*@height: alto de la grilla
+*Return: a pointer to a two of two arrays
 */
 
 int **alloc_grid(int width, int height)
