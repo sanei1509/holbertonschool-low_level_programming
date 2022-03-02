@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concatenated_string;
+	char *conc_string;
 	int len_one = 0, len_two = 0;
 	int i = 0, j = 0;
 	/**
@@ -37,19 +37,19 @@ char *str_concat(char *s1, char *s2)
 	/*no le añadimos el null a s1*/
 
 	/* guardamos el espacio en memoria */
-	concatenated_string = malloc(sizeof(char) * (len_two + len_one));
+	conc_string = malloc(sizeof(char) * (len_two + len_one));
 
-	if (concatenated_string == NULL)
+	if (conc_string == NULL)
 	{
 		return (NULL);
 	}
 	/*above try concatenate*/
 	i = 0, j = 0;
 	for (i = 0; i < len_one; i++)
-		*(concatenated_string + i) = *(s1 + i);
+		*(conc_string + i) = *(s1 + i);
 
 	for (j = 0; j < len_two; i++, j++)
-		*(concatenated_string + i) = *(s2 + j);
+		*(conc_string + i) = *(s2 + j);
 
-	return (concatenated_string);
+	return (conc_string);
 }
