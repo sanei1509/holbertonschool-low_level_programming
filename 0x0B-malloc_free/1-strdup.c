@@ -26,11 +26,10 @@ char *_strdup(char *str)
 	ld++;
 
 	copy_of_str = malloc(sizeof(char) * ld);
-
 	if (copy_of_str == NULL)
 	{
 		return (NULL);
-        }
+	}
 	else
 	{
 		for (i = 0; i < ld; i++)
@@ -40,4 +39,4 @@ char *_strdup(char *str)
 
 	return (copy_of_str);
 	}
-}	
+}
