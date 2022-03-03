@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < len_one; i++)
 		*(conc_string + i) = *(s1 + i);
 
-	for (j = 0; j < (len_one + n); i++, j++)
+	for (j = 0; i < (len_one + n); i++, j++)
 		*(conc_string + i) = *(s2 + j);
 
 	return (conc_string);
