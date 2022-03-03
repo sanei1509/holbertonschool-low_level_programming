@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	if (n >= len_two)
-		n = len_two;
+		n = len_two + 1;
 
 	/*above try concatenate*/
 	i = 0, j = 0;
