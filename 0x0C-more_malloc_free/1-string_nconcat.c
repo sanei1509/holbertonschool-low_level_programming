@@ -24,10 +24,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len_one++, i++;
 	while (*(s2 + j))
 		len_two++, j++;
-	len_two++;
+
 	/*no le añadimos el null a s1*/
 	/* guardamos el espacio en memoria */
-	conc_string = malloc(sizeof(char) * (len_two + 1 + len_one));
+	conc_string = malloc(sizeof(char) * (n + 1 + len_one));
 
 	if (conc_string == NULL)
 	{
