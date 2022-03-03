@@ -10,14 +10,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ar;
 	unsigned int i;
+	
+	/* antes de asignar memoria*/
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 
 	ar = malloc(nmemb * size);
 
 	if (ar == NULL)
 		return (NULL);
-	if (nmemb == 0)
-		return (NULL);
-	if (size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
 	for (i = 0; i < (nmemb * size); i++)
