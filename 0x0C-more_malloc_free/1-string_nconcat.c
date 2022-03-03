@@ -45,8 +45,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; i < (len_one + n); i++, j++)
 	{
 		*(conc_string + i) = *(s2 + j);
-		if(n <= len_two)
-			conc_string[len_one + i + 1] = '\0'; 
+		if (n <= len_two)
+		conc_string[len_one + (n + 1)] = '\0';
 	}
 
 	return (conc_string);
