@@ -34,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* alloc memory for owner*/
 	arr->owner = malloc(sizeof(char) * lowner);
 	if (arr->owner == NULL)
-	{	
+	{
 		free(arr->name);
 		free(arr);
 		return (NULL);
@@ -44,7 +44,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		arr->owner[j] = owner[j];
 
 	arr->age = age;
-
 	return (arr);
 	}
 	return (NULL);
