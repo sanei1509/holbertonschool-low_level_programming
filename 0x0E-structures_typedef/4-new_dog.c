@@ -11,6 +11,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *arr;
 	int i, j, lname = _strlen(name), lowner = _strlen(owner);
+	lname++, lowner++;
 
 	/*tengo que tener valores*/
 	if (name && owner)
@@ -22,7 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/* alloc memory for name */
-	arr->name = malloc(sizeof(char) * (lname + 1));
+	arr->name = malloc(sizeof(char) * (lname));
 	if (arr->name == NULL)
 	{
 		free(arr);
@@ -32,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i <= lname; i++)
 		arr->name[i] = name[i];
 	/* alloc memory for owner*/
-	arr->owner = malloc(sizeof(char) * (lowner + 1));
+	arr->owner = malloc(sizeof(char) * (lowner));
 	if (arr->owner == NULL)
 	{
 		free(arr);
