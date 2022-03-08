@@ -9,8 +9,8 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j;
 	dog_t *arr;
+	int i, j, lname = _strlen(name), lowner = _strlen(owner);
 
 	/*tengo que tener valores*/
 	if (name && owner)
@@ -22,24 +22,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/* alloc memory for name */
-	arr->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	arr->name = malloc(sizeof(char) * (lname + 1));
 	if (arr->name == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
 	/* do copy of name*/
-	for (i = 0; i <= (_strlen(name) + 1); i++)
+	for (i = 0; i <= lname; i++)
 		arr->name[i] = name[i];
 	/* alloc memory for owner*/
-	arr->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	arr->owner = malloc(sizeof(char) * (lowner + 1));
 	if (arr->owner == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
 	/* Do a copy of owner */
-	for (j = 0; j < (_strlen(owner) + 1); j++)
+	for (j = 0; j <= lowner; j++)
 		arr->owner[j] = owner[j];
 
 	arr->age = age;
