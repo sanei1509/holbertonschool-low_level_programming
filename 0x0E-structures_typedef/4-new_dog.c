@@ -10,9 +10,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *arr;
-	int i, j, lname = _strlen(name), lowner = _strlen(owner);
-	
-	lname++, lowner++;
+	int i, j, lname = (_strlen(name) + 1), lowner = (_strlen(owner) + 1);
 
 	/*tengo que tener valores*/
 	if (name && owner)
