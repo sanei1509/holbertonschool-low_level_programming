@@ -11,6 +11,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *arr;
 	int i, j, lname = _strlen(name), lowner = _strlen(owner);
+	
 	lname++, lowner++;
 
 	/*tengo que tener valores*/
@@ -23,24 +24,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/* alloc memory for name */
-	arr->name = malloc(sizeof(char) * (lname));
+	arr->name = malloc(sizeof(char) * lname);
 	if (arr->name == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
 	/* do copy of name*/
-	for (i = 0; i <= lname; i++)
+	for (i = 0; i < lname; i++)
 		arr->name[i] = name[i];
 	/* alloc memory for owner*/
-	arr->owner = malloc(sizeof(char) * (lowner));
+	arr->owner = malloc(sizeof(char) * lowner);
 	if (arr->owner == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
 	/* Do a copy of owner */
-	for (j = 0; j <= lowner; j++)
+	for (j = 0; j < lowner; j++)
 		arr->owner[j] = owner[j];
 
 	arr->age = age;
