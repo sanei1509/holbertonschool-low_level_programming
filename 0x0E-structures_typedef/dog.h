@@ -2,6 +2,7 @@
 #define _DEFINE_DOG
 
 #include <stdio.h>
+#include <stdlib.h>
 /**
  *struct dog - atributes of dog
  *@name: pointer to a name
