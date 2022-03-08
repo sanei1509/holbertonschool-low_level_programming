@@ -11,6 +11,7 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	/* check the input */
 	if (d != NULL)
 	{
 		d->name = name;
