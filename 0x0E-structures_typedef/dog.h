@@ -15,12 +15,10 @@ float age;
 char *owner;
 };
 
-typedef struct
-{
-char *name;
-float age;
-char *owner;
-} dog_t;
+/**
+ *dog_t - type of struct
+ */
+typedef struct dog dog_t;
 
 void print_dog(struct dog *d);
 
