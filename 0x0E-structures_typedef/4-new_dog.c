@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/* do copy of name*/
-	for (i = 0; i < lname; i++)
+	for (i = 0; i <= lname; i++)
 		arr->name[i] = name[i];
 	/* alloc memory for owner*/
 	arr->owner = malloc(sizeof(char) * lowner);
@@ -39,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/* Do a copy of owner */
-	for (j = 0; j < lowner; j++)
+	for (j = 0; j <= lowner; j++)
 		arr->owner[j] = owner[j];
 
 	arr->age = age;
