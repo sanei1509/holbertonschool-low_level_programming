@@ -30,7 +30,6 @@ while (ops[i].op != NULL)
 	i++;
 }
 printf("Error\n");
-return (NULL);
 exit(99);
 
 }
