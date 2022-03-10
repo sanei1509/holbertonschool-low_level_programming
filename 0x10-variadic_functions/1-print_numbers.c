@@ -21,8 +21,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i < n - 1)
 		printf("%d%s", temp_number, separator);
 		else
-		printf("%d", temp_number);
+		printf("%d\n", temp_number);
 	}
-	printf("\n");
+
 	va_end(params);
 }
