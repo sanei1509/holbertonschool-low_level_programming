@@ -12,8 +12,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	int temp_number;
 
 	va_start(params, n);
-
+	
 	/*border situations*/
+	if(n > 0)
+	{
 	for (i = 0; i < n; i++)
 	{
 		temp_number = va_arg(params, int);
@@ -24,6 +26,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", temp_number);
 	}
 	printf("\n");
-
+	}
 	va_end(params);
 }
