@@ -52,13 +52,13 @@ void print_all(const char * const format, ...)
 
 	va_list params;
 
-types_t type[] = {
-{'c', print_char},
-{'i', print_int},
-{'f', print_float},
-{'s', print_string},
-{'\0', NULL}
-};
+	types_t type[] = {
+	{'c', print_char},
+	{'i', print_int},
+	{'f', print_float},
+	{'s', print_string},
+	{'\0', NULL}
+	};
 
 	va_start(params, format);
 
