@@ -2,7 +2,7 @@
 
 /**
 *print_char - print a char
-*@params: receive parameter
+*@c: receive parameter c
 */
 void print_char(va_list c)
 {

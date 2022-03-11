@@ -4,8 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+
 /**
-*type - struct
+*struct type - struct
 *@type: type of the variable
 *@f: function that choose other
 */
