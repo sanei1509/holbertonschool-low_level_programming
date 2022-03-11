@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
 /**
 *type - struct
 *@type: type of the variable
@@ -14,7 +13,7 @@ typedef struct type
 {
 char type;
 void (*f)(va_list);
-}types_t;
+} types_t;
 
 /*protoypes*/
 int sum_them_all(const unsigned int n, ...);
