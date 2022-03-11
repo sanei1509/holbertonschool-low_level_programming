@@ -2,7 +2,19 @@
 #define _VARIADIC_FUNCTIONS_H
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
+
+/**
+*type - struct
+*@type: type of the variable
+*@f: function that choose other
+*/
+typedef struct type
+{
+char type;
+void (*f)(va_list);
+}types_t;
 
 /*protoypes*/
 int sum_them_all(const unsigned int n, ...);
