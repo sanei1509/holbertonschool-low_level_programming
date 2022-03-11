@@ -43,10 +43,9 @@ void print_string(va_list s)
 /**
 *print_all - print anything
 *@format: receive list of types
-**/
-
+*/
 void print_all(const char * const format, ...)
-{	
+{
 	int i;
 	int j;
 	char *space = "";
@@ -82,4 +81,3 @@ void print_all(const char * const format, ...)
 	va_end(params);
 	printf("\n");
 }
-
