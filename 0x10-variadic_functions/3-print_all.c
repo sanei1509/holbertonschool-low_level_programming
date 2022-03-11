@@ -53,7 +53,7 @@ void print_all(const char * const format, ...)
 
 	va_list params;
 
-	types_t type[] = {
+	types_t type_var[] = {
 	{'c', print_char},
 	{'i', print_int},
 	{'f', print_float},
@@ -67,12 +67,12 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
-		while (type[i].type != '\0')
+		while (type_var[i].type != '\0')
 		{
-			if (type[i].type == format[j])
+			if (type_var[i].type == format[j])
 			{
 				printf("%s", space);
-				type[i].f(params);
+				type_var[i].f(params);
 				space = ", ";
 			}
 			i++;
