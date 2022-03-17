@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  *list_len - list the num of elements of nodes
