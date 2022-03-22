@@ -8,11 +8,16 @@
 
 int sum_listint(listint_t *head)
 {
-	//allocate node
-	listint_t node_;
+	listint_t ptr;
 
-	/*put in the data*/
-	node_-> = new_data;
+	ptr = head;
+	int sum = 0;
 
-	/**/
+	while (ptr != NULL)
+	{
+		sum += ptr;
+		ptr = ptr->next;
+	}
+
+	return (sum);
 }
