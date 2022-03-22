@@ -1,27 +1,6 @@
 #include "lists.h"
 
 /**
-*getNode - crate and return node
-*@n: integers n
-*Return: newnode
-*/
-listint_t *getNode(int n)
-{
-	listint_t *newNode;
-	
-	newNode = malloc(sizeof(listint_t));
-
-	if(newNode != NULL)
-	{
-	/**inserting data*/
-	newNode->n = n;
-	newNode->next = NULL;
-	return newNode;
-	}
-	return(NULL);
-}
-
-/**
 **insert_nodeint_at_index - put the node in a given position
 *@head: pointer to a pointer to a first node
 *@idx: given position
@@ -31,23 +10,37 @@ listint_t *getNode(int n)
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *temp;
 	unsigned int size = 0;
-
-	if (idx < 1 || idx > size + 1)
-		return (NULL);
-	while (idx--)
+	listint_t *new_node, *aux = *head;
+	/*guardamos memoria*/
+	new_node = malloc(sizeof(listint_t));
+	if (new_node != NULL)
 	{
-		if (idx == 0)
-		{
-		/*adding node at idx*/
-			temp = getNode(n);
-			temp->next = *head;
-			*head = temp;
-		}
-		else
-		head = &(*head)->next;
+		new_node->n = n;
+		new_node->next = NULL;
 	}
-	size++;
-	return(temp);
+	/*solo tenemos un nodo*/
+	if (head == NULL)
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
+	/*indice pedido == 0*/
+	if (idx == 0)
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
+	while (size < (idx - 1))
+	{
+		aux = aux->next;
+		size++;
+		if (aux == NULL)
+			return (NULL);
+	}
+	new_node->next = aux->next;
+	aux->next = new_node;
+	return (new_node);
 }
