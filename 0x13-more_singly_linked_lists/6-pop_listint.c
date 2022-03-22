@@ -10,11 +10,12 @@ int pop_listint(listint_t **head)
 {
 	listint_t *aux_2 = *head;
 
+	/*precisamos la data de la lista*/
 	int result = (*head)->n;
 
 	*head = (*head)->next;
 
-	if (aux_2 == NULL)
+	if (head == NULL)
 		return (0);
 
 	free(aux_2);
