@@ -8,15 +8,15 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *aux_2 = *head;
+	listint_t *aux_2 = (*head);
+
+	if (head == NULL)
+		return (0);
 
 	/*precisamos la data de la lista*/
 	int result = aux_2->n;
 
-	*head = (*head)->next;
-
-	if (aux_2 == NULL)
-		return (0);
+	*head = aux_2->next;
 
 	free(aux_2);
 	return (result);
