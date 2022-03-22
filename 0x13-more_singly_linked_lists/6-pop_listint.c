@@ -11,7 +11,7 @@ int pop_listint(listint_t **head)
 	listint_t *aux_2 = *head;
 
 	/*precisamos la data de la lista*/
-	int result = (*head)->n;
+	int result = aux_2->n;
 
 	*head = (*head)->next;
 
