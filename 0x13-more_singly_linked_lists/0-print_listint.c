@@ -2,7 +2,7 @@
 
 /**
  *print_listint - print all the elements of a listint_t
- *@h: pointer tO A first node of the list
+ *@h: pointer to A first node of the list
  *Return: the number of nodes
  */
 
@@ -12,15 +12,10 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		if (h->n >= 0)
-		{
-			printf("%d\n", h->n);
-			/*pasamos al próximo*/
-			h = h->next;
-			count++;
-		}
-		else
-			return (0);
+		printf("%d\n", h->n);
+		/*pasamos al próximo*/
+		h = h->next;
+		count++;
 	}
 	return (count);
 }
