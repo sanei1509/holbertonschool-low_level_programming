@@ -15,7 +15,7 @@ int pop_listint(listint_t **head)
 
 	*head = (*head)->next;
 
-	if (head == NULL)
+	if (aux_2 == NULL)
 		return (0);
 
 	free(aux_2);
