@@ -35,8 +35,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	{
 		aux = aux->next;
 	}
-	}
 	/*igualar el nuevo nodo al que queda al salir del while*/
 	aux->next = new_node;
+	}
 	return (new_node);
 }
