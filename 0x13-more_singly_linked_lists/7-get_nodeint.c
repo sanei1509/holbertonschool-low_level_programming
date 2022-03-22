@@ -14,7 +14,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	/*necesitamos un contador para comparar con el index*/
 	unsigned int count = 0;
 
-	if(aux == NULL)
+	if (aux == NULL)
 	{
 		return (NULL);
 	}
