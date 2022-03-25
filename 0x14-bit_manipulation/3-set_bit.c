@@ -4,7 +4,7 @@
 *set_bit - change bit of a given position
 *@n: pointer to a number binary
 *@index: position of a bit to change
-*@Return: 1 if work -1 is not
+*Return: 1 if work -1 is not
 */
 
 int set_bit(unsigned long int *n, unsigned int index)
