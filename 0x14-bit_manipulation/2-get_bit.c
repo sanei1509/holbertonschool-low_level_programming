@@ -17,11 +17,10 @@ int get_bit(unsigned long int n, unsigned int index)
 		s *= 2;
 		potencia++;
 	}
-	if (index <= potencia)
+	if (index <= potencia - 1)
 	{
 			return (num_bin);
 	}
 
 	return (-1);
 }
-
