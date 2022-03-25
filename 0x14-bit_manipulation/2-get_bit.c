@@ -10,8 +10,8 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int num_bin = (n >> index) & 1;
-	
-	if (n)
+
+	if (n > 0)
 		return (num_bin);
 	else
 		return (-1);
