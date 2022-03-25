@@ -8,14 +8,9 @@
  */
 
 int get_bit(unsigned long int n, unsigned int index)
-{	
-	unsigned int cont;
-	int = 
-	while(n)
-	{
-		
-	}
-	//bitstatus
-	
+{
+	int num_bin = (n >> index) & 1;
 
+	return (num_bin);
+}
 
