@@ -9,14 +9,15 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int num_bin = (n >> index) & 1, s = n;
-	unsigned int cont = 0;
+	int num_bin = (n >> index) & 1, potencia = 0;
+	unsigned int cont = 0, s = 1;
 
-	while (s > 1)
+	while (s < n)
 	{
-		s /= 2, cont++;
+		s *= 2;
+		potencia++;
 	}
-	if (index <= cont)
+	if (index <= potencia)
 	{
 			return (num_bin);
 	}
