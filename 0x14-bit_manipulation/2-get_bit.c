@@ -16,9 +16,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		s /= 2, cont++;
 	}
-	if (index <= cont + 1)
+	if (index <= cont)
 	{
-		if (n > 0)
 			return (num_bin);
 	}
 
