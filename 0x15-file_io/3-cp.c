@@ -10,39 +10,32 @@
 int main(int argc, char *argv[])
 {
 	FILE *file_src,  *file_dest;
-	char ch, *buf1;
+	int count, writes, close_d;
+	char buf[1024];
 
-	buf1 = malloc(sizeof(char) * 1024);
-
-	/*exit 97*/
 	/*incorrect number of args*/
 	if (argc != 3)
-		exit(97);
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
 
-	file_src = fopen(argv[1], "r");
-	if (buf1 == NULL)
-		dprintf(2, "Can't write to %s", argv[1]), exit(99);
-	if (file_src == NULL)
+	file_src = open(argv[1], O_RDONLY);
+	if (file_src == -1)
 		dprintf(2, "Error: Can't read from file %s", argv[1]), exit(98);
-	/*creamos el primer archivo*/
-	open(argv[1], O_RDWR | O_CREAT | O_TRUNC, 0664);
 
-	file_dest = fopen(argv[2], "w");
+	file_dest = open(argv[1], O_RDWR | O_CREAT | O_TRUNC, 0664);
 
-	if (buf1 == NULL)
-		dprintf(2, "Can't write to %s", argv[2]), exit(99);
-	if (file_dest == NULL)
+	if (file_dest == -1)
 		dprintf(2, "Error: Can't read from file %s", argv[2]), exit(98);
 
 	/*Leemos y copiamos el archivo 1 file_1*/
-	while ((ch = fgetc(file_src)) != EOF)
-	{
-		fputc(ch, file_dest);
-		ch = fgetc(file_src);
-	}
+	
 	/*exit 100*/
-	fclose(file_src);
-	fclose(file_dest);
+	close_d = close(src);
+	if (close == -1)
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from), exit(100);
+	close_d = close(dest);
+	if (close == -1)
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to), exit(100);
+
 	return (1);
 
 }
