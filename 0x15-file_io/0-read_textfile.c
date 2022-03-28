@@ -17,7 +17,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf = malloc(sizeof(char *) * letters);
 
 	if (buf == NULL)
+	{
+		close(op);
 		return (0);
+	}
 	/*invalid data since filename pointer*/
 	if (filename == NULL)
 	{
