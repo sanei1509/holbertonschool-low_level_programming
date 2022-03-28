@@ -19,13 +19,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (buf == NULL)
 		return (0);
-
+	/*invalid data since filename pointer*/
 	if (filename == NULL)
 	{
 		free(buf);
 		return (0);
 	}
-
+	/*file descriptor fail return*/
 	if (op == -1)
 	{
 		free(buf);
