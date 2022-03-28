@@ -11,8 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int op = open(filename, O_RDONLY);
 	char *buf;
-	int cont;
-	int w_ret;
+	int cont, w_ret;
 
 	/*allocate memory*/
 	buf = malloc(sizeof(char *) * letters);
@@ -34,8 +33,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	cont = read(op, buf, letters);
-
 	w_ret = write(STDOUT_FILENO, buf, letters);
+
 	/*workin with returns case boders*/
 	if (cont == -1 || w_ret == -1)
 	{
