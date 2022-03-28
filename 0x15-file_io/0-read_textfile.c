@@ -9,25 +9,42 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t i;
 	int op = open(filename, O_RDONLY);
-	char buf[1024];
+	char *buf;
+	size_t cont;
+	int w_ret;
 
-	if(*filename)
-	{
-	if (op == -1)
+	/*allocate memory*/
+	buf = malloc(sizeof(char *) * letters);
+
+	if (buf == NULL)
 		return (0);
 
-	for (i = 0; i < letters; i++)
+	if (filename == NULL)
 	{
-		_putchar(buf[i]);
+		free(buf);
+		return (0);
 	}
 
-	read(op, buf, letters);
+	if (op == -1)
+	{
+		free(buf);
+		close(op);
+		return (0);
+	}
+
+	cont = read(op, buf, letters);
+
+	w_ret = write(0, buf, letters);
+	/*workin with returns case boders*/
+	if (w_ret == -1)
+	{
+		close(op);
+		free(buf);
+		return (0);
+	}
 
 	close(op);
 
-	return (letters);
-	}
-	return (0);
+	return (cont);
 }
