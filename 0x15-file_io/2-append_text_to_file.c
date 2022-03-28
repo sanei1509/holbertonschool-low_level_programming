@@ -4,6 +4,7 @@
  *append_text_to_file - appends text at the end of a file
  *@filename: name of the file
  *@text_content: content to copy
+ *Return: 1 on succes or -1 in fail
  */
 
 int append_text_to_file(const char *filename, char *text_content)
@@ -34,5 +35,5 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	close(file_d);
-	return (1);	
+	return (1);
 }
