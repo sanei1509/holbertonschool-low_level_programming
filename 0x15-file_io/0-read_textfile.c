@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	cont = read(op, buf, letters);
-	w_ret = write(STDOUT_FILENO, buf, letters);
+	w_ret = write(STDOUT_FILENO, buf, cont);
 
 	/*workin with returns case boders*/
 	if (cont == -1 || w_ret == -1)
