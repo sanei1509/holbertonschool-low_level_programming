@@ -9,8 +9,8 @@
 int main(int argc, char *argv[])
 {
 	int file_src = 0,  file_dest = 0;
-	char buf[1024];
 	int read_res = 0, write_res = 0, close_d = 0;
+	char buf[1024];
 
 	/*incorrect number of args*/
 	if (argc != 3)
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	file_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (file_dest == -1)
-		dprintf(2, "Error: Can't write %s\n", argv[2]), exit(99);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 
 	while ((read_res = read(file_src, buf, 1024)) != 0)
 	{
