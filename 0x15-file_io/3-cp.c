@@ -19,18 +19,19 @@ int main(int argc, char *argv[])
 	file_src = open(argv[1], O_RDONLY);
 	if (file_src == -1)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	file_dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	/*exit 99*/
+
+	file_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
 	if (file_dest == -1)
 		dprintf(2, "Error: Can't write %s\n", argv[2]), exit(99);
-	/*Leemos y copiamos el archivo 1 file_1*/
-	read_res = read(file_src, buf, 1024);
-	while (read_res != 0)
+
+	while ((read_res = read(file_src, buf, 1024)) != 0)
 	{
 		if (read_res == -1)
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	/*escribimos lo leido dentro del file_2 de en buf hasta count*/
+
 		write_res = write(file_dest, buf, read_res);
+
 		if (write_res == -1)
 			dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
