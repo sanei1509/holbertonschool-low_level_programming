@@ -8,9 +8,9 @@
 
 int main(int argc, char *argv[])
 {
-	int file_src,  file_dest;
+	int file_src = 0,  file_dest = 0;
 	char buf[1024];
-	int read_res, write_res, close_d;
+	int read_res = 0, write_res = 0, close_d = 0;
 
 	/*incorrect number of args*/
 	if (argc != 3)
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	file_src = open(argv[1], O_RDONLY);
 	if (file_src == -1)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	file_dest = open(argv[1], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	file_dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	/*exit 99*/
 	if (file_dest == -1)
 		dprintf(2, "Error: Can't write %s\n", argv[2]), exit(99);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	/*escribimos lo leido dentro del file_2 de en buf hasta count*/
 		write_res = write(file_dest, buf, read_res);
-		if (write_res)
+		if (write_res == -1)
 			dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	/*exit 100*/
