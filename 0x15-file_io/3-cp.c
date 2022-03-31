@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	file_src = open(argv[1], O_RDONLY);
 	if (file_src == -1)
-		dprintf(2, "Can't read from file %s\n", argv[1]), exit(98);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
 
 	file_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
