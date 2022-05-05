@@ -32,6 +32,7 @@ void deleteNode(dlistint_t **head_ref, dlistint_t *del)
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *aux;
+	dlistint_t *next;
 	unsigned int i = 0;
 
 	/*si esta vacia*/
@@ -52,6 +53,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (aux == NULL || aux->next == NULL)
 		return (-1);
+
+	next = aux->next->next;
+
+	free(aux->next);
+	aux->next = next;
 
 	deleteNode(head, aux);
 
