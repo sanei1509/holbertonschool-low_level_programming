@@ -12,7 +12,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int size = 0;
 	dlistint_t *new_node, *aux = *h;
-	/*guardamos memoria*/
+
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node != NULL)
 	{
@@ -21,20 +21,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else
 		return (NULL);
-	/*solo tenemos un nodo*/
-	if (h == NULL)
+	/*solo tenemos un nodo y indice perdido = 0 */
+	if (h == NULL || idx == 0)
 	{
 		new_node->next = *h;
 		*h = new_node;
 		return (new_node);
 	}
-	/*indice pedido == 0*/
-	if (idx == 0)
-	{
-		new_node->next = *h;
-		*h = new_node;
-		return (new_node);
-	}
+
 	while (size < (idx - 1))
 	{
 		aux = aux->next;
