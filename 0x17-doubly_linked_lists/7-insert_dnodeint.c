@@ -21,7 +21,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else
 		return (NULL);
-	/*solo tenemos un nodo y indice perdido = 0 */
+	/*solo tenemos un nodo y indice pedido = 0 */
 	if (h == NULL || idx == 0)
 	{
 		new_node->next = *h;
@@ -36,6 +36,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (aux == NULL)
 			return (NULL);
 	}
+	/*test*/
+	(*h)->prev = new_node;
+	/*test*/
 	new_node->next = aux->next;
 	aux->next = new_node;
 	return (new_node);
