@@ -13,13 +13,9 @@ size_t print_dlistint(const dlistint_t *h)
 	/*aseguramos que la lista tenga nodos*/
 	while (h != NULL)
 	{
-		/*verificamos que haya data*/
-		if (h->n)
-		{
-			printf("%d\n", h->n);
-			h = h->next;
-			contador++;
-		}
+		printf("%d\n", h->n);
+		h = h->next;
+		contador++;
 	}
 	return (contador);
 }
