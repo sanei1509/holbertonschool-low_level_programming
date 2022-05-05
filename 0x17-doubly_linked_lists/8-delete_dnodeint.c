@@ -9,7 +9,7 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *aux;
+	dlistint_t *aux, *next;
 	unsigned int i = 0;
 
 	/*si esta vacia*/
@@ -41,5 +41,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(aux);
 		return (1);
 	}
-	return (-1);
+
+	next = aux->next->next;
+	free(aux->next);
+	aux->next = next;
+
+	return (1);
 }
