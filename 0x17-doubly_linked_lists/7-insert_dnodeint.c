@@ -22,7 +22,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	else
 		return (NULL);
 	/*solo tenemos un nodo y indice pedido = 0 */
-	if (h == NULL || idx == 0)
+	if (h == NULL || idx == 0 || !h)
 	{
 		/*test*/
 		(*h)->prev = new_node;
