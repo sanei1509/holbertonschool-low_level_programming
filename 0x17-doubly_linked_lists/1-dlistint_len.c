@@ -13,12 +13,8 @@ size_t dlistint_len(const dlistint_t *h)
 	/*aseguramos que la lista tenga nodos*/
 	while (h != NULL)
 	{
-		/*verificamos que haya data*/
-		if (h->n)
-		{
-			h = h->next;
-			contador++;
-		}
+		h = h->next;
+		contador++;
 	}
 	return (contador);
 }
