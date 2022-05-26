@@ -1,11 +1,10 @@
- <img src="https://user-images.githubusercontent.com/69850751/159728963-0de364d1-5756-4a58-a76b-4a3be25d95f7.png"/>
+<img src="https://user-images.githubusercontent.com/69850751/159728963-0de364d1-5756-4a58-a76b-4a3be25d95f7.png"/>
  
  # Low Level Programming
 
 > Welcome, this is my work directory for all projects on **low level or
 > programming**, below I leave the address for each project and a short
 > description of each one.
-
 ## Links to each project
 
 * [0x00 - Hello world](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x00-hello_world)
