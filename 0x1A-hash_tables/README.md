@@ -20,7 +20,7 @@ At the end of this project, are expected to learn these concepts:
 
 ## Execution tests with this command:
   ````
-  python3 -m doctest ./tests/*
+  gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-test_file.c 0-task_file.c -o a
   ````
   
 ## Using these Data structures
