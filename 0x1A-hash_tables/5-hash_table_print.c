@@ -10,7 +10,7 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *element = NULL;
 	unsigned long int i = 0;
 	int cont = 0;
-	
+
 	if (ht == NULL)
 		return;
 
@@ -24,12 +24,11 @@ void hash_table_print(const hash_table_t *ht)
 			if (cont > 0)
 				printf(", ");
 			printf("'%s': '%s'", element->key, element->value);
-			
+
 			element = element->next;
 			cont++;
 		}
 		i++;
 	}
 	printf("}\n");
-        
 }
