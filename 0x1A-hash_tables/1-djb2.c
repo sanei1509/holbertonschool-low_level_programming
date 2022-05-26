@@ -3,18 +3,17 @@
 * hash_djb2 - implementación del algoritmo djb2
 * @str: cadena utilizada para generar valor hash
 *
-* Retorno: valor hash
+* Return: valor hash
 */
-unsigned  long  int  hash_djb2 ( const  unsigned  char *str)
+unsigned long int hash_djb2(const unsigned char *str)
 {
-	 Hash int largo  sin firmar ;
-	intc ;
+	unsigned long int hash;
+	int c;
 
-	hash = 5381 ;
-	mientras ((c = *cadena++))
+	hash = 5381;
+	while ((c = *str++))
 	{
-		hash = ((hash << 5 ) + hash) + c; /* hash * 33 + c */
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
-	retorno (hash);
+	return (hash);
 }
-
