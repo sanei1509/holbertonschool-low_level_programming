@@ -38,15 +38,16 @@ C es un lenguaje de bajo nivel hoy en día. Ciertamente, es el idioma principal 
 * [0x0B - Malloc free](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x0B-malloc_free)
 * [0x12 - singly linked list](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x12-singly_linked_lists)
 * [0x13 - more singly linked list](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x13-more_singly_linked_lists)
-
 * [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
 
-* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+* [0x15-file_io](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x15-file_io)
 
-* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+* [0x17-doubly_linked_lists](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists)
 
-* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+* [0x18-dynamic_libraries](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries)
 
-* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+* [0x1A-hash_tables](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables)
 
-* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+# AUTHOR
+
+* Santiago Neira
