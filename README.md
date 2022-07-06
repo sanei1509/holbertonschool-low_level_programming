@@ -5,6 +5,19 @@
 > Welcome, this is my work directory for all projects on **low level or
 > programming**, below I leave the address for each project and a short
 > description of each one.
+
+Los lenguajes de alto nivel como ``JavaScript`` y ``Python`` pueden ser los lenguajes de programación más populares en la actualidad, pero no hay duda de que estos lenguajes están haciendo mucho trabajo para el desarrollador, desde la gestión de la memoria hasta la interpretación del tiempo de ejecución. Por otro lado, la programación de bajo nivel tiene muy poca abstracción: está escribiendo código mucho más cerca de la computadora. Entonces, ¿por qué querrías aprender programación de bajo nivel?
+
+Lo que necesitas saber:
+
+- El nivel bajo se refiere al código escrito directamente para la computadora, es decir. Código de Máquina y Ensamblaje
+
+- ¿Es C un lenguaje de bajo nivel? ¡Las opiniones están mezcladas!
+
+- ¿Por qué bajo nivel? Comprender la programación de bajo nivel es clave si desea trabajar en Machine Learning o Internet of Things. Además de eso, comprender lo que sucede debajo del capó hace que cualquiera sea un mejor desarrollador. 
+
+C es un lenguaje de bajo nivel hoy en día. Ciertamente, es el idioma principal que utiliza Holberton en el plan de estudios de bajo nivel. Entonces, para mí, C es de bajo nivel porque cuando lo usamos tenemos que administrar nuestra propia memoria de aplicación, no la administra el lenguaje. Esto requiere que nosotros, como ingenieros, asumamos la responsabilidad total de nuestras acciones. Esto significa que nuestros errores tenderán a ser catastróficos, pero las recompensas son sustanciales en términos de eficiencia y consumo de energía en cualquier dispositivo que ejecute nuestro código. Además, ser un programador de C puede ser intrínsecamente satisfactorio si te gusta comprender los detalles técnicos de tu trabajo.
+
 ## Links to each project
 
 * [0x00 - Hello world](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x00-hello_world)
@@ -25,3 +38,15 @@
 * [0x0B - Malloc free](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x0B-malloc_free)
 * [0x12 - singly linked list](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x12-singly_linked_lists)
 * [0x13 - more singly linked list](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x13-more_singly_linked_lists)
+
+* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+
+* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+
+* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+
+* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+
+* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+
+* [0x14-bit_manipulation](https://github.com/sanei1509/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
