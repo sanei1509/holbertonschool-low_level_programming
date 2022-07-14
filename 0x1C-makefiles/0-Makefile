@@ -2,4 +2,4 @@
 # nombre del ejecutable -> school
 # construir con la regla "all"
 all : main.c school.c
-		gcc main.c school.c -o school
+	gcc main.c school.c -o school
