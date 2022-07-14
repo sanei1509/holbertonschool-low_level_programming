@@ -1,24 +1,19 @@
 #!/usr/bin/python3
+"task 5 interview"
 
 def island_perimeter(grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
-        if not grid:
-            return 0
-
-        def sum_adjacent(i, j):
-            adjacent = (i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1),
-            res = 0
-            for x, y in adjacent:
-                if x < 0 or y < 0 or x == len(grid) or y == len(grid[0]) or grid[x][y] == 0:
-                    res += 1
-            return res
-
-        count = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == 1:
-                    count += sum_adjacent(i, j)
-        return count
+    '''funcion para calcular el parametro'''
+    filas = len(grid)
+    if filas == 0 or len(grid[0]) == 0:
+        return 0
+    islands, superPos = 0, 0
+    columnas = len(grid[0])
+    for i in range(filas):
+        for j in range(columnas):
+            if (grid[i][j] == 1):
+                islands += 1
+                if (i < filas - 1 and grid[i + 1][j] == 1):
+                    superPos += 1
+                if (j < columnas - 1 and grid[i][j + 1] == 1):
+                    superPos += 1
+    return islands * 4 - superPos * 2
