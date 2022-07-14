@@ -1,0 +1,20 @@
+# Crear un ejecutable nombrado usando la regla all
+# CC: el compilado a ser usado
+# SRC: los archivos .c
+# OBJ: los archivos .o
+# NAME: el nombre a ser ejecutado
+#
+# CC = gcc
+# SRC = main.c school.c
+# OBJ = $(SRC:.c=.o)
+# NAME = school
+#
+# Actualiza la parte que actualizo
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
