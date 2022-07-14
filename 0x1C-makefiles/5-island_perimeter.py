@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 "task 5 interview"
 
+
 def island_perimeter(grid):
     '''funcion para calcular el parametro'''
     filas = len(grid)
