@@ -1,0 +1,28 @@
+# A complete Makefile
+# nombre del ejecutable: "school"
+# Reglas:
+#       -all: construye tu ejecutable
+#       -clean: elimina todos los temporarios EMACS and VIM
+#       -oclean: borrar los archivos .o
+#       -fclean: borrar todos los archivos temporarios, ejecutable, y archivos
+#       -re: recompilación de los source files
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+        $(CC) $(OBJ) $(CFLAGS) -o $(NAME)
+
+clean:
+        $(RM) *~ $(NAME)
+
+oclean:
+        $(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
