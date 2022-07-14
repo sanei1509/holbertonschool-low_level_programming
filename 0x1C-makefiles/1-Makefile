@@ -1,0 +1,9 @@
+# Con la regla all, crear un ejecutables llamado school
+# crear variables CC and SRC
+# CC: el compilado a ser usado
+# SRC: los archivos .c
+
+CC = gcc main.c school.c -o school
+SRC = main.c school.c 
+all : $(SRC)
+	$(CC)
